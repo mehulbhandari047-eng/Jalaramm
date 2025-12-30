@@ -6,13 +6,15 @@ interface SEOProps {
   description: string;
   image?: string;
   type?: 'website' | 'article';
+  canonical?: string;
 }
 
 const SEO: React.FC<SEOProps> = ({ 
   title, 
   description, 
   image = 'https://images.unsplash.com/photo-1544735049-717e92133f32?auto=format&fit=crop&w=1200&q=80',
-  type = 'website'
+  type = 'website',
+  canonical = "https://jalaramenterprisesdaman.com"
 }) => {
   useEffect(() => {
     const siteName = "Jalaram Enterprises Daman";
@@ -39,44 +41,69 @@ const SEO: React.FC<SEOProps> = ({
     updateMeta('twitter:description', description);
     updateMeta('twitter:image', image);
 
-    // JSON-LD Structured Data for Local Business
+    // Dynamic Canonical Link
+    let link: HTMLLinkElement | null = document.querySelector("link[rel='canonical']");
+    if (!link) {
+      link = document.createElement("link");
+      link.setAttribute("rel", "canonical");
+      document.head.appendChild(link);
+    }
+    link.setAttribute("href", canonical);
+
+    // Multi-Layered Schema Markup for #1 Indexing
     const schemaData = {
       "@context": "https://schema.org",
-      "@type": "TravelAgency",
-      "name": "Jalaram Enterprises",
-      "alternateName": "Jalaram Travels & Transport Daman",
-      "description": description,
-      "url": "https://jalaramenterprisesdaman.com",
-      "logo": image,
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-9979338355",
-        "contactType": "customer service",
-        "areaServed": "IN",
-        "availableLanguage": ["en", "Hindi", "Gujarati"]
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "1360/1 school falia dunetha road, dunetha Nani daman",
-        "addressLocality": "Daman",
-        "postalCode": "396210",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 20.4077,
-        "longitude": 72.8433
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
-        ],
-        "opens": "00:00",
-        "closes": "23:59"
-      },
-      "sameAs": [
-        "https://wa.me/9979338355"
+      "@graph": [
+        {
+          "@type": "TravelAgency",
+          "@id": "https://jalaramenterprisesdaman.com/#organization",
+          "name": "Jalaram Enterprises",
+          "url": "https://jalaramenterprisesdaman.com",
+          "logo": image,
+          "image": image,
+          "description": "Daman's leading agency for luxury tours, car rentals, and Pan-India logistics managed by Amar Bhandari.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1360/1 school falia dunetha road, dunetha Nani daman",
+            "addressLocality": "Daman",
+            "postalCode": "396210",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 20.4077,
+            "longitude": 72.8433
+          },
+          "telephone": "+91-9979338355",
+          "priceRange": "$$",
+          "openingHours": "Mo-Su 00:00-23:59"
+        },
+        {
+          "@type": "Service",
+          "serviceType": "Car Rental & Transport",
+          "provider": { "@id": "https://jalaramenterprisesdaman.com/#organization" },
+          "areaServed": "India",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Travel & Transport Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Luxury Tour Packages"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pan-India Logistics & Goods Transport"
+                }
+              }
+            ]
+          }
+        }
       ]
     };
 
@@ -90,7 +117,7 @@ const SEO: React.FC<SEOProps> = ({
     }
     script.text = JSON.stringify(schemaData);
 
-  }, [title, description, image, type]);
+  }, [title, description, image, type, canonical]);
 
   return null;
 };

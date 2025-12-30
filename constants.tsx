@@ -5,8 +5,8 @@ export const TOURS: TourPackage[] = [
   {
     id: '1',
     title: 'Daman Heritage Tour',
-    location: 'Daman, India',
-    description: 'Explore the historic Moti Daman Fort, sea-facing cathedrals, and the serene Jampore beach.',
+    location: 'Nani Daman, India',
+    description: 'Explore the historic Moti Daman Fort, sea-facing cathedrals, and the serene Jampore beach. Daman travel at its best.',
     price: 1500,
     duration: '1 Day',
     image: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80',
@@ -16,7 +16,7 @@ export const TOURS: TourPackage[] = [
     id: '2',
     title: 'Goa Coastal Odyssey',
     location: 'Goa, India',
-    description: 'A premium journey through North and South Goa’s finest beaches and vibrant night markets.',
+    description: 'A premium journey through North and South Goa’s finest beaches and vibrant night markets. Expert tour guides included.',
     price: 4500,
     duration: '4 Days',
     image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80',
@@ -25,8 +25,8 @@ export const TOURS: TourPackage[] = [
   {
     id: '3',
     title: 'Saputara Hill Escape',
-    location: 'Gujarat, India',
-    description: 'Breath of fresh air at Gujarat’s only hill station. Enjoy lake boating and sunset points.',
+    location: 'Saputara, Gujarat',
+    description: 'Breath of fresh air at Gujarat’s only hill station. Enjoy lake boating and sunset points. Perfect family holiday.',
     price: 2800,
     duration: '2 Days',
     image: 'https://images.unsplash.com/photo-1626014303757-646c21dc91b3?auto=format&fit=crop&w=800&q=80',
@@ -35,8 +35,8 @@ export const TOURS: TourPackage[] = [
   {
     id: '4',
     title: 'Udaipur Royal Getaway',
-    location: 'Rajasthan, India',
-    description: 'Live like royalty in the city of lakes with guided palace tours and sunset cruises.',
+    location: 'Udaipur, Rajasthan',
+    description: 'Live like royalty in the city of lakes with guided palace tours and sunset cruises. Luxury Rajasthan travel.',
     price: 8500,
     duration: '3 Days',
     image: 'https://images.unsplash.com/photo-1590393952601-b223832c3894?auto=format&fit=crop&w=800&q=80',
@@ -115,60 +115,26 @@ export const TESTIMONIALS = [
     text: "Our Udaipur tour was managed perfectly. From the Toyota Crysta's cleanliness to the driver's professional behavior, Jalaram Enterprises made our holiday unforgettable.",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
     rating: 5
-  },
-  {
-    id: 3,
-    name: "Vikram Singh",
-    role: "Operations Manager",
-    location: "Surat",
-    text: "We use Jalaram's staff transport daily. Their punctuality and safety protocols under Amar's supervision are unmatched in the region. Highly recommended for corporate contracts.",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
-    rating: 5
-  },
-  {
-    id: 4,
-    name: "Priya Patel",
-    role: "NRI Client",
-    location: "USA / Daman",
-    text: "Every time I visit Daman, I rely only on Jalaram Enterprises for car rentals. The vehicles are premium, and the service feels like family. Best in Nani Daman!",
-    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80",
-    rating: 5
   }
 ];
 
 export const TRAVEL_SERVICES = [
   {
     title: "Airport Pickup & Drop",
-    description: "Reliable and punctual transfers to and from major airports.",
+    description: "Reliable and punctual transfers to Nani Daman Airport and Mumbai International.",
     icon: "✈️"
   },
   {
     title: "Corporate & Staff Transport",
-    description: "Daily office staff transportation solutions for companies.",
+    description: "Daily office staff transportation solutions for Daman industrial zones.",
     icon: "💼"
   },
   {
-    title: "Outstation Cab Services",
-    description: "Comfortable long-distance travel across India.",
+    title: "Pan-India Logistics",
+    description: "Safe and secure goods transport using specialized transport tempos from Daman.",
     icon: "🛣️"
-  },
-  {
-    title: "Contractual Services",
-    description: "Monthly or yearly vehicle contracts tailored to your needs.",
-    icon: "📄"
   }
 ];
-
-export const TRANSPORT_DETAILS = {
-  title: "Jalaram Enterprises: Transport & Logistics",
-  features: [
-    "All types of Tempo Available",
-    "Pan India Delivery Safe",
-    "Reliable & On-time services",
-    "Goods & Parcel Transport"
-  ],
-  lead: "Amar Bhandari"
-};
 
 export const COMPANY_PHONE = "9979338355";
 export const COMPANY_PHONE_ALT = "9979438355";
