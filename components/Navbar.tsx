@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-6 py-4 ${
+    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 px-6 py-4 ${
       scrolled ? 'glass py-3' : 'bg-transparent py-6'
     }`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -32,20 +32,20 @@ const Navbar: React.FC = () => {
               scrolled ? 'text-blue-600' : 'text-white'
             }`}>Jalaram</span>
           </div>
-          <span className={`text-[10px] font-black tracking-[0.3em] uppercase leading-none -mt-1 ml-1 transition-colors duration-500 ${
+          <span className={`text-[10px] font-black tracking-[0.4em] uppercase leading-none -mt-1 ml-1 transition-colors duration-500 ${
             scrolled ? 'text-orange-500' : 'text-orange-400'
           }`}>Enterprises</span>
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Links */}
         <div className="hidden lg:flex items-center space-x-12">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`text-[13px] font-black uppercase tracking-[0.2em] transition-all hover:scale-110 ${
+              className={`text-[11px] font-black uppercase tracking-[0.25em] transition-all hover:scale-105 ${
                 location.pathname === link.path 
-                  ? 'text-blue-500 underline decoration-4 underline-offset-8' 
+                  ? scrolled ? 'text-blue-600' : 'text-white border-b-2 border-orange-500 pb-1' 
                   : scrolled ? 'text-slate-700' : 'text-white/80 hover:text-white'
               }`}
             >
@@ -54,41 +54,34 @@ const Navbar: React.FC = () => {
           ))}
           <Link
             to="/contact"
-            className="bg-blue-600 text-white px-8 py-3 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-blue-700 transition-all shadow-xl hover:-translate-y-1 active:scale-95"
+            className="bg-blue-600 text-white px-8 py-3.5 rounded-2xl text-[11px] font-black uppercase tracking-[0.2em] hover:bg-blue-700 transition-all shadow-xl hover:-translate-y-1"
           >
             Inquire Now
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Trigger */}
         <button 
-          className={`lg:hidden p-3 rounded-2xl transition-all ${scrolled ? 'bg-slate-100 text-slate-900' : 'bg-white/10 text-white backdrop-blur-md'}`}
+          className={`lg:hidden p-3 rounded-2xl transition-all ${scrolled ? 'bg-slate-100 text-slate-900' : 'bg-white/10 text-white backdrop-blur-md border border-white/20'}`}
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle Menu"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            {isOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h16" />
-            )}
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
           </svg>
         </button>
       </div>
 
-      {/* Mobile Navigation Overlay */}
+      {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 z-[101] bg-slate-900 flex flex-col items-center justify-center space-y-10 animate-in fade-in zoom-in-95">
-          <button onClick={() => setIsOpen(false)} className="absolute top-8 right-8 text-white p-4">
-             <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-          </button>
-          {navLinks.map((link) => (
+        <div className="fixed inset-0 z-[101] bg-slate-900 flex flex-col items-center justify-center space-y-12 animate-in fade-in duration-300">
+           <button onClick={() => setIsOpen(false)} className="absolute top-10 right-10 text-white">
+              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+           </button>
+           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`text-4xl font-serif font-black tracking-tighter transition-all ${
-                location.pathname === link.path ? 'text-blue-400 scale-110' : 'text-white hover:text-blue-300'
-              }`}
+              className={`text-5xl font-serif font-black tracking-tighter ${location.pathname === link.path ? 'text-orange-500' : 'text-white'}`}
               onClick={() => setIsOpen(false)}
             >
               {link.name}
@@ -99,7 +92,7 @@ const Navbar: React.FC = () => {
             className="bg-orange-500 text-white px-12 py-5 rounded-3xl font-black text-xl shadow-2xl"
             onClick={() => setIsOpen(false)}
           >
-            Book a Service
+            Quick Booking
           </Link>
         </div>
       )}

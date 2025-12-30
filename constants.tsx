@@ -9,7 +9,7 @@ export const TOURS: TourPackage[] = [
     description: 'Explore the historic Moti Daman Fort, sea-facing cathedrals, and the serene Jampore beach. Daman travel at its best.',
     price: 1500,
     duration: '1 Day',
-    image: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80',
     category: 'cultural'
   },
   {
@@ -19,7 +19,7 @@ export const TOURS: TourPackage[] = [
     description: 'A premium journey through North and South Goa’s finest beaches and vibrant night markets. Expert tour guides included.',
     price: 4500,
     duration: '4 Days',
-    image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80',
     category: 'luxury'
   },
   {
@@ -29,7 +29,7 @@ export const TOURS: TourPackage[] = [
     description: 'Breath of fresh air at Gujarat’s only hill station. Enjoy lake boating and sunset points. Perfect family holiday.',
     price: 2800,
     duration: '2 Days',
-    image: 'https://images.unsplash.com/photo-1626014303757-646c21dc91b3?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1626014303757-646c21dc91b3?auto=format&fit=crop&w=1200&q=80',
     category: 'nature'
   },
   {
@@ -39,7 +39,7 @@ export const TOURS: TourPackage[] = [
     description: 'Live like royalty in the city of lakes with guided palace tours and sunset cruises. Luxury Rajasthan travel.',
     price: 8500,
     duration: '3 Days',
-    image: 'https://images.unsplash.com/photo-1590393952601-b223832c3894?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1590393952601-b223832c3894?auto=format&fit=crop&w=1200&q=80',
     category: 'luxury'
   }
 ];
@@ -53,9 +53,9 @@ export const VEHICLES: Vehicle[] = [
     passengers: 4,
     transmission: 'Auto',
     images: [
-      'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=1200&q=80'
     ]
   },
   {
@@ -66,9 +66,9 @@ export const VEHICLES: Vehicle[] = [
     passengers: 3,
     transmission: 'Manual',
     images: [
-      'https://images.unsplash.com/photo-1586191121278-200df1d4d659?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1519003300449-424ad040507b?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1519003300449-424ad040507b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1586191121278-200df1d4d659?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80'
     ]
   },
   {
@@ -79,8 +79,8 @@ export const VEHICLES: Vehicle[] = [
     passengers: 7,
     transmission: 'Manual',
     images: [
-      'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1200&q=80'
     ]
   },
   {
@@ -91,8 +91,8 @@ export const VEHICLES: Vehicle[] = [
     passengers: 7,
     transmission: 'Auto',
     images: [
-      'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1200&q=80'
     ]
   }
 ];
