@@ -97,6 +97,45 @@ export const VEHICLES: Vehicle[] = [
   }
 ];
 
+export const TESTIMONIALS = [
+  {
+    id: 1,
+    name: "Rajesh Kumar",
+    role: "Proprietor, RK Industrial Solutions",
+    location: "Mumbai",
+    text: "Amar Bhandari and his team at Jalaram Enterprises are the most reliable logistics partners we've had in Daman. Their Pan-India delivery is truly 'on-time' every single time.",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+    rating: 5
+  },
+  {
+    id: 2,
+    name: "Ananya Sharma",
+    role: "Family Traveler",
+    location: "Delhi",
+    text: "Our Udaipur tour was managed perfectly. From the Toyota Crysta's cleanliness to the driver's professional behavior, Jalaram Enterprises made our holiday unforgettable.",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
+    rating: 5
+  },
+  {
+    id: 3,
+    name: "Vikram Singh",
+    role: "Operations Manager",
+    location: "Surat",
+    text: "We use Jalaram's staff transport daily. Their punctuality and safety protocols under Amar's supervision are unmatched in the region. Highly recommended for corporate contracts.",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
+    rating: 5
+  },
+  {
+    id: 4,
+    name: "Priya Patel",
+    role: "NRI Client",
+    location: "USA / Daman",
+    text: "Every time I visit Daman, I rely only on Jalaram Enterprises for car rentals. The vehicles are premium, and the service feels like family. Best in Nani Daman!",
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80",
+    rating: 5
+  }
+];
+
 export const TRAVEL_SERVICES = [
   {
     title: "Airport Pickup & Drop",
